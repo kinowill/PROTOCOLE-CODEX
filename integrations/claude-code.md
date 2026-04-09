@@ -77,3 +77,72 @@ Pour vérifier que le protocole est bien actif :
 machines. Si tu utilises Claude Code sur plusieurs ordinateurs, garde
 ce dossier `PROTOCOLE/` dans un endroit synchronisé (Drive, Dropbox,
 git privé) et réinjecte manuellement.
+
+## Activer l'auto-monitoring du contexte (`show_context.ps1`)
+
+Le protocole (section 12) prévoit que l'IA s'auto-vérifie sur sa
+consommation de tokens avant toute grosse tâche. Claude Code n'a
+**aucune introspection native** sur ce point : sans outil externe, il
+ne peut pas savoir où il en est dans sa fenêtre de contexte.
+
+L'outil `show_context.ps1` (à la racine de ce dossier) lit les fichiers
+`.jsonl` de session de Claude Code et retourne, pour la session en
+cours, le total prompt et son pourcentage de la fenêtre.
+
+> **Limite actuelle** : l'outil est en PowerShell, donc **Windows
+> uniquement**. Sur macOS / Linux, il faudra le porter (les `.jsonl`
+> de Claude Code se trouvent dans `~/.claude/projects/<projet>/`).
+
+### Étape 1 — Repérer le chemin local de ton clone
+
+Note l'emplacement où tu as cloné ce repo, par exemple :
+- Windows : `C:\Users\<toi>\dev\PROTOCOLE`
+- macOS / Linux : `~/dev/PROTOCOLE` (le script ne marchera pas tel quel,
+  voir limite ci-dessus)
+
+### Étape 2 — Coller ce bloc dans `~/.claude/CLAUDE.md`
+
+Ajoute ce bloc à la fin de ton `CLAUDE.md` (global ou projet, selon ta
+config). **Remplace `<CHEMIN_VERS_TON_CLONE>`** par ton chemin réel.
+
+```markdown
+## Auto-monitoring du contexte
+
+L'IA n'a aucune introspection native sur sa consommation de tokens. Avant toute
+grosse tâche (refactor multi-fichiers, audit large, gros docs, batch d'edits) et
+périodiquement sur les longues sessions, lancer via Bash :
+`powershell.exe -NoProfile -ExecutionPolicy Bypass -File "<CHEMIN_VERS_TON_CLONE>/show_context.ps1"`
+
+Le script affiche le % de la fenêtre 200k consommé. Seuils d'action :
+- **< 50 %** feu vert.
+- **50–75 %** prévenir, penser à découper.
+- **75–90 %** prévenir, **sauvegarder l'état** (commit WIP, note dans journal, maître à jour), découper.
+- **> 90 %** stop, tout sauvegarder dans maître/journal, proposer une nouvelle session.
+
+Le chiffre lu = état au **tour précédent** (le tour courant n'est pas encore flushé), prévoir une marge.
+Détails complets : section 12 de `PROTOCOLE.md` (repo : github.com/kinowill/PROTOCOLE).
+```
+
+### Étape 3 — Vérifier que ton Claude le voit
+
+Dans une nouvelle session Claude Code, demande simplement :
+> « Combien de tokens reste-t-il dans ma fenêtre de contexte ? »
+
+Si Claude répond en exécutant la commande `powershell.exe ... show_context.ps1`
+et te donne un pourcentage réel, c'est gagné. S'il répond « je ne sais pas »
+ou s'il invente, le bloc n'est pas chargé : vérifier le chemin et le fait
+que le `CLAUDE.md` est bien lu en début de session.
+
+### Côté utilisateur (toi, pas l'IA)
+
+Pour pouvoir consulter l'état du contexte en deux clics, créer un raccourci
+`.bat` sur le bureau qui contient :
+
+```bat
+@echo off
+chcp 65001 >nul
+title Claude Code - Etat des contextes
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "<CHEMIN_VERS_TON_CLONE>\show_context.ps1"
+echo.
+pause
+```

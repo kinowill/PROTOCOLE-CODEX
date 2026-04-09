@@ -23,10 +23,11 @@ Le protocole transforme cette roulette russe en processus.
 |---|---|
 | `PROTOCOLE.md` | Le protocole canonique. C'est le cœur du produit. |
 | `CHANGELOG.md` | Historique des versions du protocole. |
+| `show_context.ps1` | Outil d'auto-monitoring du contexte (sections 12 du protocole). Lit les `.jsonl` de session de Claude Code et affiche la consommation de tokens en cours. **Windows / PowerShell uniquement** pour l'instant. |
 | `templates/DOCUMENT_MAITRE.md` | Squelette de document maître à copier dans un nouveau projet. |
 | `templates/ROADMAP.md` | Squelette de roadmap minimale. |
 | `templates/VALIDATION_LOG.md` | Squelette de journal de validation. |
-| `integrations/claude-code.md` | Comment injecter le protocole dans Claude Code. |
+| `integrations/claude-code.md` | Comment injecter le protocole dans Claude Code (et activer `show_context.ps1`). |
 | `integrations/goose.md` | Comment injecter le protocole dans Goose. |
 | `integrations/generic.md` | Comment l'adapter à n'importe quel agent IA. |
 
