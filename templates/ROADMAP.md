@@ -1,4 +1,4 @@
-# Roadmap — [NOM DU PROJET]
+# Roadmap - [NOM DU PROJET]
 
 > Backlog de référence du projet.
 > Mis à jour à chaque chantier terminé ou réorienté.
@@ -24,7 +24,7 @@ Dernière mise à jour : YYYY-MM-DD
 
 Format : `[ ]` à faire, `[~]` partiellement fait, `[x]` fait.
 
-### [ ] HP1 — Titre court
+### [ ] HP1 - Titre court
 
 **Objectif** :
 - ...
@@ -40,13 +40,13 @@ Format : `[ ]` à faire, `[~]` partiellement fait, `[x]` fait.
 
 ## Priorités moyennes
 
-### [ ] MP1 — Titre court
+### [ ] MP1 - Titre court
 
 (même structure que HP)
 
 ## Priorités basses
 
-### [ ] BP1 — Titre court
+### [ ] BP1 - Titre court
 
 (même structure)
 

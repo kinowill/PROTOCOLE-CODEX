@@ -1,4 +1,4 @@
-# AGENTS.md — [NOM DU PROJET]
+# AGENTS.md - [NOM DU PROJET]
 
 Ce fichier connecte le projet au protocole Codex. Il ne remplace pas
 `PROTOCOLE.md` par une version courte.
@@ -49,7 +49,7 @@ répéter ici : garder ce fichier comme fiche projet.
 Si ce projet doit être autonome, coller ci-dessous l'intégralité de :
 
 ```text
-C:\PROJETS\PROTOCOLE CODEX\PROTOCOLE.md
+<chemin-vers-ce-repo>\PROTOCOLE.md
 ```
 
 Ne pas coller une synthèse.

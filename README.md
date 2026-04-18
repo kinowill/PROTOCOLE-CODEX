@@ -1,4 +1,4 @@
-# Protocole de travail IA — Codex
+# Protocole de travail IA - Codex
 
 ## Pourquoi ce protocole existe
 
@@ -23,6 +23,44 @@ version courte, une checklist ou une synthèse. Les fichiers d'intégration
 expliquent comment l'injecter dans Codex, mais ils ne remplacent pas sa lecture
 complète.
 
+## Démarrage rapide
+
+### Installation globale recommandée
+
+À utiliser si tu veux que Codex applique le protocole dans tous tes projets.
+
+1. Ouvre ou crée le fichier global Codex :
+
+```text
+Windows : C:\Users\<toi>\.codex\AGENTS.md
+macOS / Linux : ~/.codex/AGENTS.md
+```
+
+2. Colle dedans **l'intégralité** de `PROTOCOLE.md`.
+
+3. Relance Codex.
+
+4. Teste dans un projet sans document maître : Codex doit proposer de créer le
+   maître avant d'agir sur le chantier demandé.
+
+### Installation par projet
+
+À utiliser si le protocole doit vivre dans un repo précis.
+
+1. Copie `templates/AGENTS.md` à la racine du projet.
+2. Remplis les spécificités projet : stack, commandes, sources de vérité,
+   zones sensibles, contraintes de prod.
+3. Colle ensuite l'intégralité de `PROTOCOLE.md` dans la section prévue si le
+   projet doit être autonome.
+
+### Hybride recommandé
+
+Le mode le plus pratique au quotidien :
+
+- `~/.codex/AGENTS.md` contient le protocole complet ;
+- chaque projet contient un `AGENTS.md` court avec seulement ses spécificités ;
+- le `AGENTS.md` projet ne résume pas le protocole, il le complète.
+
 ## Ce que contient ce dossier
 
 | Fichier | Rôle |
@@ -46,6 +84,20 @@ complète.
    les créer en début de session avant d'agir sur le chantier demandé.
 5. Faire évoluer ce dossier, pas des copies divergentes. Quand une règle
    change, la modifier ici, puis réinjecter le protocole dans Codex.
+
+## Test minimal
+
+Dans un projet sans document maître :
+
+1. Lance une nouvelle session Codex.
+2. Pose une demande simple sur le projet.
+3. Codex doit constater l'absence du maître et proposer de le créer avant de
+   modifier ou analyser profondément le projet.
+
+Si Codex répond directement à la demande sans mentionner les sources de vérité,
+le protocole n'est pas chargé ou il est trop faible dans la hiérarchie des
+instructions. Vérifie `AGENTS.md`, `AGENTS.override.md`, le dossier de lancement
+et les instructions projet.
 
 ## Positionnement Codex
 

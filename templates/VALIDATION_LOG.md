@@ -1,4 +1,4 @@
-# Journal de validation — [NOM DU PROJET]
+# Journal de validation - [NOM DU PROJET]
 
 > Trace des validations réelles effectuées sur le projet.
 > Sert de mémoire entre les sessions : qui a vérifié quoi, quand, dans quel état.
@@ -6,7 +6,7 @@
 
 ---
 
-## YYYY-MM-DD — Titre court de la session
+## YYYY-MM-DD - Titre court de la session
 
 **Contexte** :
 - (ce qui a motivé cette validation)
@@ -36,6 +36,6 @@
 
 ---
 
-## YYYY-MM-DD — (entrée précédente)
+## YYYY-MM-DD - (entrée précédente)
 
 ...

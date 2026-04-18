@@ -1,4 +1,4 @@
-# Intégration — Codex
+# Intégration - Codex
 
 ## Principe
 
@@ -22,7 +22,7 @@ charger correctement dans Codex.
 | Memories | Aides de reprise. Pas des sources de vérité. |
 | Slash commands | Contrôle de session : `/status`, `/diff`, `/review`, `/compact`, `/init`, etc. |
 
-## Option A — Protocole global Codex
+## Option A - Protocole global Codex
 
 À utiliser si tu veux que toutes tes sessions Codex héritent du protocole.
 
@@ -51,7 +51,7 @@ Sous macOS / Linux :
    sans document maître, de commencer une session. Il doit identifier l'absence
    de maître et proposer de le créer avant d'agir sur le chantier demandé.
 
-## Option B — Protocole par projet
+## Option B - Protocole par projet
 
 À utiliser si tu veux versionner le protocole avec un repo précis.
 
@@ -68,7 +68,7 @@ Sous macOS / Linux :
 
 4. Committer `AGENTS.md` avec le projet si le protocole doit suivre le repo.
 
-## Option C — Hybride recommandé
+## Option C - Hybride recommandé
 
 Pour un usage quotidien, le plus robuste est :
 

@@ -1,6 +1,6 @@
-# Protocole de travail IA — Codex
+# Protocole de travail IA - Codex
 
-> Version 1.2 — Protocole canonique pour Codex travaillant sur des projets
+> Version 1.2 - Protocole canonique pour Codex travaillant sur des projets
 > maintenus par des utilisateurs non-développeurs.
 
 Ce document est la source de vérité du protocole. Tout le reste du dossier
@@ -50,14 +50,14 @@ parallèles. Ces mécanismes servent le protocole. Ils ne le remplacent pas.
 
 Tout projet doit avoir, dans cet ordre, ses sources de vérité explicites :
 
-1. **Document maître** — référence opérative principale du projet.
+1. **Document maître** - référence opérative principale du projet.
    Décrit ce qu'est le projet, sa stack, sa structure, son état courant.
-2. **Roadmap / backlog** — ce qui est fait, ce qui est en cours, ce qui reste.
-3. **Journal de validation** — trace des dernières validations réelles
+2. **Roadmap / backlog** - ce qui est fait, ce qui est en cours, ce qui reste.
+3. **Journal de validation** - trace des dernières validations réelles
    (ce qui a été testé, quand, dans quel état).
-4. **Code et migrations effectivement déployées** — la vérité runtime.
+4. **Code et migrations effectivement déployées** - la vérité runtime.
    En cas de conflit avec une vieille doc, c'est le code qui gagne.
-5. **Instructions Codex actives** — `AGENTS.md`, `AGENTS.override.md`,
+5. **Instructions Codex actives** - `AGENTS.md`, `AGENTS.override.md`,
    skills, rules, sandbox et permissions. Elles guident la manière de
    travailler, mais ne remplacent jamais les quatre couches précédentes.
 
@@ -97,14 +97,14 @@ L'IA doit toujours savoir laquelle de ces couches elle consulte et pourquoi.
 **Aucune de ces étapes n'est facultative.** La création du maître ou de la
 roadmap quand ils manquent fait partie du protocole, pas une exception.
 Un projet sans maître est un projet où l'utilisateur perd le contrôle
-session après session — créer le maître est toujours prioritaire sur
+session après session - créer le maître est toujours prioritaire sur
 la demande initiale.
 
 En cas de doute sur le périmètre : **demander avant de lire au hasard.**
 
 ---
 
-## 4. Sources de vérité — règles d'action
+## 4. Sources de vérité - règles d'action
 
 - **Ne jamais agir sur une supposition.** Toujours lire le fichier réel
   avant de le modifier ou d'en affirmer le contenu.

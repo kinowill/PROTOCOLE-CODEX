@@ -1,4 +1,4 @@
-# Document maître — [NOM DU PROJET]
+# Document maître - [NOM DU PROJET]
 
 > Ce document est la référence opérative principale du projet.
 > Il doit toujours pouvoir être lu seul et donner une image exacte du projet.
