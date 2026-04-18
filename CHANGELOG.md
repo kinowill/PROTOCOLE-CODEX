@@ -1,8 +1,38 @@
 # Changelog
 
+## v1.2 — 2026-04-18
+
+Adaptation dédiée à Codex.
+
+### Ajouts
+- `integrations/codex.md` : guide d'injection du protocole dans Codex via
+  `AGENTS.md`, `AGENTS.override.md`, skills, rules, sandbox, slash commands et
+  rappel `rtk`.
+- `templates/AGENTS.md` : squelette projet pour connecter un repo à Codex sans
+  résumer le protocole.
+- `PROTOCOLE.md` : nouvelle section **13 — Spécificités Codex** couvrant
+  `AGENTS.md`, skills, rules, sandbox, agents parallèles et `rtk`.
+
+### Changements
+- `PROTOCOLE.md` : adaptation de la section de début de session pour inclure
+  les instructions Codex actives avant l'analyse projet.
+- `PROTOCOLE.md` : section contexte réécrite pour Codex avec `/status`,
+  `/compact`, `/diff`, `/review`, `/mention`, `/mcp`, `/apps`, `/plugins`,
+  `/permissions` et `/sandbox-add-read-dir`.
+- `README.md` : repositionnement du dossier comme protocole Codex, avec règle
+  explicite de non-substitution par une version courte.
+
+### Retraits
+- Suppression des intégrations Claude Code, Goose et générique dans cette copie
+  Codex. Elles restent dans `PROTOCOLE CLAUDE` ou dans les versions dédiées aux
+  autres agents.
+- Suppression de `show_context.ps1`, spécifique à Claude Code. Pour Codex,
+  utiliser les surfaces natives comme `/status` et écrire l'état durable dans
+  les sources de vérité du projet avant compaction ou reprise.
+
 ## v1.1 — 2026-04-09
 
-Ajout de l'auto-monitoring du contexte de l'IA.
+Ajout de l'auto-monitoring du contexte de l'IA dans la version Claude.
 
 ### Ajouts
 - `PROTOCOLE.md` : nouvelle **section 12 — Auto-monitoring du contexte**.
