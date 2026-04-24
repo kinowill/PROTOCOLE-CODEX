@@ -33,6 +33,7 @@ avant d'agir sur le chantier demandé.
 - Lint / format :
 - Build :
 - Déploiement :
+- GitHub / forge :
 
 ## `rtk`
 
@@ -40,6 +41,15 @@ avant d'agir sur le chantier demandé.
 systématiquement. Si le projet le mentionne ou si une commande sensible le
 justifie, vérifier d'abord qu'il existe (`Get-Command rtk`, `where rtk`,
 `command -v rtk`). S'il n'existe pas, utiliser les commandes standard et le dire.
+
+## `gh`
+
+`gh` peut être utile si le projet passe souvent par GitHub (PR, issues,
+checks CI, releases, API). Le préciser ici si c'est un outil attendu, sans en
+faire une dépendance cachée si `git` + interface web suffisent.
+
+Ne jamais documenter un token brut dans ce fichier. Pour l'automatisation,
+préférer `GH_TOKEN` ou `GITHUB_TOKEN`.
 
 ## Protocole canonique
 

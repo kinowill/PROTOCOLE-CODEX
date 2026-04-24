@@ -66,12 +66,13 @@ Le mode le plus pratique au quotidien :
 | Fichier | Rôle |
 |---|---|
 | `PROTOCOLE.md` | Le protocole canonique complet. C'est le cœur du dossier. |
+| `ROADMAP.md` | Backlog opératif du repo protocole lui-même. |
 | `CHANGELOG.md` | Historique des versions du protocole Codex. |
 | `templates/DOCUMENT_MAITRE.md` | Squelette de document maître à copier dans un nouveau projet. |
 | `templates/ROADMAP.md` | Squelette de roadmap minimale. |
 | `templates/VALIDATION_LOG.md` | Squelette de journal de validation. |
 | `templates/AGENTS.md` | Squelette `AGENTS.md` pour connecter un projet à Codex sans résumer le protocole. |
-| `integrations/codex.md` | Méthode d'intégration Codex : global, projet, skills, rules, contexte, `rtk`. |
+| `integrations/codex.md` | Méthode d'intégration Codex : global, projet, skills, rules, contexte, `rtk`, `gh`. |
 
 ## Comment utiliser ce dossier avec Codex
 

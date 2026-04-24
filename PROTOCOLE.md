@@ -1,6 +1,6 @@
 # Protocole de travail IA - Codex
 
-> Version 1.2 - Protocole canonique pour Codex travaillant sur des projets
+> Version 1.3 - Protocole canonique pour Codex travaillant sur des projets
 > maintenus par des utilisateurs non-développeurs.
 
 Ce document est la source de vérité du protocole. Tout le reste du dossier
@@ -185,6 +185,23 @@ les sessions.**
 - Si Codex travaille dans un worktree, un environnement cloud ou une branche
   temporaire, dire explicitement où vit le changement et ce qu'il faut faire
   pour l'intégrer au repo de référence.
+
+### GitHub CLI (`gh`)
+
+`gh` peut être utile quand l'action vise **GitHub lui-même** : pull request,
+issue, checks CI, release ou appel API GitHub. C'est un **outil de workflow**,
+pas une source de vérité du projet.
+
+Règles d'usage :
+- vérifier sa présence quand c'est utile (`Get-Command gh`, `where gh`,
+  `command -v gh`) ;
+- vérifier l'authentification si nécessaire (`gh auth status`) ;
+- si `gh` est absent ou non configuré, utiliser `git`, l'interface web ou
+  l'API existante du projet, et le dire ;
+- ne jamais mettre un token brut dans la documentation, un script versionné
+  ou une commande partagée ;
+- pour l'automatisation, préférer les variables d'environnement (`GH_TOKEN`,
+  `GITHUB_TOKEN`) à un token collé dans une commande.
 
 ---
 

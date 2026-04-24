@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.3 - 2026-04-24
+
+Ajout d'un cadrage GitHub CLI (`gh`) dans la version Codex.
+
+### Ajouts
+- `PROTOCOLE.md` : section 7 enrichie avec des règles d'usage pour `gh`
+  comme outil de workflow GitHub, avec fallback explicite et hygiène
+  d'authentification.
+- `integrations/codex.md` : section `gh` dédiée pour l'installation,
+  l'auth et les règles de token.
+- `templates/AGENTS.md` : champ GitHub / forge et rappel `gh` ajoutés
+  pour documenter cet outil au niveau projet.
+
+### Changements
+- `README.md` : description de `integrations/codex.md` mise à jour pour
+  inclure `gh`.
+
 ## v1.2 - 2026-04-18
 
 Adaptation dédiée à Codex.

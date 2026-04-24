@@ -129,6 +129,21 @@ Règles :
 - si `rtk` n'est pas disponible, utiliser les commandes standard et le signaler ;
 - ne jamais inventer une sous-commande `rtk`.
 
+## GitHub CLI (`gh`)
+
+`gh` est utile quand l'action vise GitHub directement : PR, issues, checks,
+releases ou appels API GitHub. Le protocole demande de le traiter comme un
+outil de workflow, jamais comme une source de vérité du projet.
+
+Règles :
+- vérifier qu'il est disponible (`Get-Command gh`, `where gh`, `command -v gh`) ;
+- vérifier l'auth si nécessaire (`gh auth status`) ;
+- si `gh` est absent ou non configuré, retomber sur `git`, l'interface web
+  ou l'API déjà utilisée par le projet, et le dire ;
+- ne jamais écrire un token brut dans `AGENTS.md`, un script versionné ou
+  une commande partagée ;
+- pour l'automatisation, préférer `GH_TOKEN` ou `GITHUB_TOKEN`.
+
 ## Contexte Codex
 
 Codex expose des commandes utiles selon la surface :
